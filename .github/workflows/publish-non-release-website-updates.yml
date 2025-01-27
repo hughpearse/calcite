@@ -67,7 +67,7 @@ jobs:
           git config url."https://asf-ci-deploy:$CALCITE_WEBSITE_BUILD@github.com/".insteadOf "https://github.com/"
           git config user.email ${{ github.actor }}@users.noreply.github.com
           git config user.name ${{ github.actor }}
-          git remote add origin https://github.com/apache/calcite-site
+          git remote add origin https://github.com/hughpearse/calcite-site
           git fetch                          # Pull from the calcite-site repo
           git reset origin/main --soft     # Bring in changes from the calcite-site repo, but keep our local changes
           git reset -- javadocAggregate/     # Restore the javadoc

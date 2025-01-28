@@ -25,6 +25,7 @@ services:
       - .:/root
   build-site:
     image: ruby:3.3.7-slim-bullseye
+    working_dir: /home/jekyll
     command: sh -c "rm -rf /home/jekyll/.bundle /home/jekyll/Gemfile.lock /home/jekyll/.jekyll-cache && apt-get update && apt-get install -y build-essential libssl-dev zlib1g-dev ruby-dev bundler && bundle install && bundle exec jekyll build"
     volumes:
       - .:/home/jekyll
